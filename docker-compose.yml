@@ -1,0 +1,48 @@
+services:
+  # Backend service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: notetime-backend-prod
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - sqlite-data:/app/data
+    environment:
+      - PORT=8080
+      - DB_PATH=/app/data/notetime.db
+      - GO_ENV=production
+    networks:
+      - notetime-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Frontend service - using Nginx for production
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: production
+    container_name: notetime-frontend-prod
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - notetime-network
+
+# Persistent volumes
+volumes:
+  sqlite-data:
+    driver: local
+
+# Network for service communication
+networks:
+  notetime-network:
+    driver: bridge

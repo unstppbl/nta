@@ -1,0 +1,136 @@
+.note-detail-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.note-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.note-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.note-title-input {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  flex-grow: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  color: inherit;
+  padding: 0.3rem 0.5rem;
+  outline: none;
+}
+
+.note-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.note-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.note-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.note-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.today-label {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.lines-container {
+  flex-grow: 1;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.line-item {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.line-timestamp {
+  min-width: 80px;
+  color: #888;
+  font-size: 0.9rem;
+  padding-right: 1rem;
+}
+
+.line-content {
+  flex-grow: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: calc(100% - 100px);
+}
+
+.line-input-form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.line-input-container {
+  display: flex;
+  width: 100%;
+}
+
+.input-timestamp {
+  min-width: 80px;
+  color: #888;
+  font-size: 0.9rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.line-input {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  outline: none;
+}

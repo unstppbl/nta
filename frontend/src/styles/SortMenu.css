@@ -1,0 +1,29 @@
+.sort-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #1a1a24;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  z-index: 10;
+}
+
+.sort-option {
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem 1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.sort-option:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sort-option.active {
+  color: #4a90e2;
+}
