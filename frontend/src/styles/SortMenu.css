@@ -27,3 +27,21 @@
 .sort-option.active {
   color: #4a90e2;
 }
+
+
+.sort-menu {
+  background-color: var(--bg-secondary);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.sort-option {
+  color: var(--text-primary);
+}
+
+.sort-option:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.sort-option.active {
+  color: var(--accent-color);
+}

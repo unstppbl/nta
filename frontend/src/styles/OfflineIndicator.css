@@ -1,0 +1,36 @@
+/* frontend/src/styles/OfflineIndicator.css */
+.offline-indicator {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f44336;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideUp 0.3s ease;
+  }
+  
+  .offline-icon {
+    margin-right: 0.5rem;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .offline-indicator {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.8rem;
+    }
+  }

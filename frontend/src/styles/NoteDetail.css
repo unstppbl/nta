@@ -134,3 +134,51 @@
   padding: 0.5rem 0;
   outline: none;
 }
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .note-detail-container {
+    padding: 0;
+  }
+  
+  .note-detail-header {
+    padding: 0.75rem;
+  }
+  
+  .back-button {
+    font-size: 1.2rem;
+  }
+  
+  .line-timestamp {
+    min-width: 60px;
+    font-size: 0.8rem;
+  }
+  
+  .input-timestamp {
+    min-width: 60px;
+    font-size: 0.8rem;
+  }
+}
+
+.note-detail-container {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.note-detail-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.note-title-input {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.today-label, .line-timestamp, .input-timestamp {
+  color: var(--text-muted);
+}
+
+.line-input {
+  color: var(--text-primary);
+}

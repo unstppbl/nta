@@ -27,3 +27,16 @@
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.search-icon {
+  color: var(--text-muted);
+}
+
+.search-bar input {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.search-bar input:focus {
+  background-color: var(--bg-tertiary-hover);
+}

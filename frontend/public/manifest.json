@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "NoteTime",
+  "name": "NoteTime - Time-Based Note Taking",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,19 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a0a14",
+  "background_color": "#0a0a14",
+  "orientation": "portrait",
+  "categories": ["productivity", "utilities"],
+  "description": "A simple and elegant time-based note-taking app",
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "New Note",
+      "short_name": "New",
+      "description": "Create a new note",
+      "url": "/",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ]
 }

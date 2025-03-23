@@ -1,0 +1,79 @@
+/* frontend/src/styles/Pagination.css */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 0.5rem;
+  }
+  
+  .pagination-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background-color: var(--bg-tertiary-hover);
+  }
+  
+  .pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .page-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .page-number:hover {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .page-number.active {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .ellipsis {
+    width: 36px;
+    text-align: center;
+    color: var(--text-muted);
+  }
+  
+  @media (max-width: 480px) {
+    .pagination-button,
+    .page-number {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .ellipsis {
+      width: 24px;
+    }
+  }

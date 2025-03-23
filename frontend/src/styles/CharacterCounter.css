@@ -1,0 +1,17 @@
+/* frontend/src/styles/CharacterCounter.css */
+.character-counter {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  .character-counter.approaching {
+    color: #e69b00; /* Amber warning color */
+  }
+  
+  .character-counter.at-limit {
+    color: #d32f2f; /* Red error color */
+    font-weight: bold;
+  }

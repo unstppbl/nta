@@ -152,3 +152,70 @@
 .sort-container {
   position: relative;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .notes-list-container {
+    padding: 0.5rem;
+  }
+  
+  .notes-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .note-card {
+    padding: 0.75rem;
+  }
+  
+  .create-note-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .notes-footer {
+    font-size: 0.7rem;
+  }
+  
+  .contact-links, .discuss-links {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+
+.notes-list-container {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.date-heading {
+  color: var(--text-muted);
+}
+
+.note-card {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.note-card:hover {
+  background-color: var(--bg-tertiary-hover);
+}
+
+.note-time {
+  color: var(--text-muted);
+}
+
+.note-preview {
+  color: var(--text-secondary);
+}
+
+.create-note-button {
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.notes-footer {
+  color: var(--text-muted);
+}

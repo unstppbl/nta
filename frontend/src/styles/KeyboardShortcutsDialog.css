@@ -1,0 +1,102 @@
+/* frontend/src/styles/KeyboardShortcutsDialog.css */
+.shortcuts-dialog {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.2s ease;
+  }
+  
+  .shortcuts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .shortcuts-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    line-height: 1;
+  }
+  
+  .close-button:hover {
+    color: var(--text-primary);
+  }
+  
+  .shortcuts-content {
+    padding: 1.5rem;
+  }
+  
+  .shortcuts-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .shortcut-row {
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .shortcut-row:last-child {
+    border-bottom: none;
+  }
+  
+  .shortcut-keys {
+    padding: 0.75rem 1rem 0.75rem 0;
+    white-space: nowrap;
+    width: 1%;
+  }
+  
+  .shortcut-description {
+    padding: 0.75rem 0;
+  }
+  
+  kbd {
+    display: inline-block;
+    margin: 0 0.1rem;
+    padding: 0.2rem 0.5rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1;
+    color: var(--text-primary);
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 480px) {
+    .shortcuts-table {
+      font-size: 0.85rem;
+    }
+    
+    .shortcut-keys {
+      padding: 0.5rem 0.5rem 0.5rem 0;
+    }
+    
+    .shortcut-description {
+      padding: 0.5rem 0;
+    }
+    
+    kbd {
+      padding: 0.1rem 0.3rem;
+      font-size: 0.75rem;
+    }
+  }
