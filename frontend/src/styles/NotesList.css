@@ -23,6 +23,7 @@
 .header-controls {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .notes-content {

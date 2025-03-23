@@ -1,3 +1,4 @@
+// src/components/NotesList.js - Complete corrected file
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
@@ -120,6 +121,14 @@ const NotesList = ({ darkMode, toggleDarkMode }) => {
       <header className="notes-header">
         <h1>notetime</h1>
         <div className="header-controls">
+          <div className="sort-container">
+            <button className="filter-button" onClick={toggleSortMenu}>
+              <span className="filter-icon">↓</span>
+            </button>
+            {showSortMenu && (
+              <SortMenu onSort={handleSort} currentSort={sortBy} />
+            )}
+          </div>
           <button className="icon-button" onClick={toggleDarkMode}>
             {darkMode ? '☀️' : '🌙'}
           </button>
@@ -127,17 +136,6 @@ const NotesList = ({ darkMode, toggleDarkMode }) => {
       </header>
 
       <SearchBar onSearch={handleSearch} />
-      
-      <div className="filter-section">
-        <div className="sort-container">
-          <button className="filter-button" onClick={toggleSortMenu}>
-            <span className="filter-icon">↓</span>
-          </button>
-          {showSortMenu && (
-            <SortMenu onSort={handleSort} currentSort={sortBy} />
-          )}
-        </div>
-      </div>
 
       {loading ? (
         <div className="loading">Loading notes...</div>
